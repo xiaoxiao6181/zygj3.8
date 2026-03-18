@@ -354,16 +354,16 @@
             <input type="text" class="form-input" id="idCardNumberInput" autocomplete="nope" name="idCardNumber" placeholder="请输入您的身份证号码" data-i18n="[placeholder]realMe.placeholderIdCardNumber"/>
         </div>
         
-        <!-- <span class="form-label" data-x="31" data-y="363" data-i18n="cash.withdrawPassword">提现密码</span>
+         <span class="form-label" data-x="31" data-y="363" data-i18n="cash.withdrawPassword">提现密码</span>
         <div class="input-box"  data-x="31" data-y="384">
             <input type="password" class="form-input" id="password2" autocomplete="nope" name="password2" placeholder="请输入您的提现密码" data-i18n="cash.withdrawPasswordPlaceholder"/>
         </div>
         <span class="form-label" data-x="31" data-y="363" autocomplete="nope" data-i18n="reg.confirmPaymentPassword">确认密码</span>
         <div class="input-box" data-x="31" data-y="384">
             <input type="password" class="form-input" id="confirm_password2" name="confirm_password2" placeholder="请输入您的确认密码" data-i18n="reg.confirmPaymentPasswordPlaceholder"/>
-        </div> -->
+        </div>
         
-        <!-- <span class="form-label" data-x="31" data-y="441" data-i18n="realMe.labelIdCardPhotos">证件照片</span>
+         <span class="form-label" data-x="31" data-y="441" data-i18n="realMe.labelIdCardPhotos">证件照片</span>
         <div class="upload-area" id="uploadArea">
         
             <input type="file" id="frontImageInput" accept="image/*" onchange="handleFileSelect(event, 'front')">
@@ -392,7 +392,7 @@
                 </svg>
                 <span class="upload-text" id="backUploadText" data-i18n="realMe.uploadBack">身份证国徽面</span>
             </div>
-        </div> -->
+        </div>
     </div>
 	<!-- 审核结束 -->
 	<!-- 审核成功开始 -->
@@ -439,22 +439,22 @@
                 $("#realNameInput").val(info.name);
                 $("#idCardNumberInput").val(info.idcard);
 
-                // // 更新全局变量
-                // uploadedFrontUrl = info.idcard_front_image;
-                // uploadedBackUrl = info.idcard_side_image;
+                 // 更新全局变量
+                 uploadedFrontUrl = info.idcard_front_image;
+                 uploadedBackUrl = info.idcard_side_image;
 
-                // // --- 关键修改：无论是否审核中，都先渲染图片 ---
-                // if (info.idcard_front_image) {
-                //     // 直接设置 src，然后调用 updatePreview 以确保 UI 状态正确
-                //     $("#frontPreviewImage").attr('src', baseConfig.baseUrl + info.idcard_front_image);
-                //     updatePreview(info.idcard_front_image, 'front');
-                // }
-                // if (info.idcard_side_image) {
-                //     $("#backPreviewImage").attr('src', baseConfig.baseUrl + info.idcard_side_image);
-                //     updatePreview( info.idcard_side_image, 'back');
-                // }
-                // --- 修改结束 ---
-				// info.review_status=0
+                 // --- 关键修改：无论是否审核中，都先渲染图片 ---
+                 if (info.idcard_front_image) {
+                     // 直接设置 src，然后调用 updatePreview 以确保 UI 状态正确
+                     $("#frontPreviewImage").attr('src', baseConfig.baseUrl + info.idcard_front_image);
+                     updatePreview(info.idcard_front_image, 'front');
+                 }
+                 if (info.idcard_side_image) {
+                     $("#backPreviewImage").attr('src', baseConfig.baseUrl + info.idcard_side_image);
+                     updatePreview( info.idcard_side_image, 'back');
+                 }
+                 --- 修改结束 ---
+				 info.review_status=0
 				
 				if (info.review_status == 1) {
 				    // 审核通过
@@ -719,14 +719,14 @@
             const realName = document.getElementById('realNameInput').value.trim();
             const idCardNumber = document.getElementById('idCardNumberInput').value.trim();
             
-            // const password2 = document.getElementById('password2').value.trim();
-            // const confirm_password2 = document.getElementById('confirm_password2').value.trim();
+             //const password2 = document.getElementById('password2').value.trim();
+             //const confirm_password2 = document.getElementById('confirm_password2').value.trim();
 
-            // 检查是否已上传两张图片
-            // if (!uploadedFrontUrl || !uploadedBackUrl) {
-            //     showAlert(I18n.t('realMe.alertUploadBothPhotos'));
-            //     return;
-            // }
+             检查是否已上传两张图片
+             if (!uploadedFrontUrl || !uploadedBackUrl) {
+                 showAlert(I18n.t('realMe.alertUploadBothPhotos'));
+                 return;
+             }
 
             if (!realName || !idCardNumber) {
                 showAlert(I18n.t('realMe.alertFillAllFields'));
