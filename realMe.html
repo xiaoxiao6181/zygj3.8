@@ -453,7 +453,7 @@
                      $("#backPreviewImage").attr('src', baseConfig.baseUrl + info.idcard_side_image);
                      updatePreview( info.idcard_side_image, 'back');
                  }
-                 --- 修改结束 ---
+               //  --- 修改结束 ---
 				 info.review_status=0
 				
 				if (info.review_status == 1) {
@@ -722,7 +722,7 @@
              //const password2 = document.getElementById('password2').value.trim();
              //const confirm_password2 = document.getElementById('confirm_password2').value.trim();
 
-             检查是否已上传两张图片
+           //  检查是否已上传两张图片
              if (!uploadedFrontUrl || !uploadedBackUrl) {
                  showAlert(I18n.t('realMe.alertUploadBothPhotos'));
                  return;
