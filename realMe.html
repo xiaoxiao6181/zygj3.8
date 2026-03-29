@@ -527,8 +527,8 @@
                 realNameBox.classList.add('disabled');
                 idCardNumberBox.classList.add('disabled');
                 // 禁用上传区域（通过CSS类）
-                // frontUploadBox.classList.add('disabled');
-                // backUploadBox.classList.add('disabled');
+                 frontUploadBox.classList.add('disabled');
+                 backUploadBox.classList.add('disabled');
                 // 隐藏提交按钮
                 submitBtn.style.display = 'none';
                 // 更新标题和描述
@@ -544,8 +544,8 @@
                 realNameBox.classList.remove('disabled');
                 idCardNumberBox.classList.remove('disabled');
                 // 启用上传区域
-                // frontUploadBox.classList.remove('disabled');
-                // backUploadBox.classList.remove('disabled');
+                 frontUploadBox.classList.remove('disabled');
+                 backUploadBox.classList.remove('disabled');
                 // // 显示提交按钮
                 submitBtn.style.display = 'flex'; // 或 'block'，取决于你的 CSS
                 // 恢复标题和描述
@@ -762,8 +762,8 @@
                         idcard: idCardNumber,
                         // password2:password2,
                         // confirm_password2:confirm_password2,
-                        // idcard_front_image: uploadedFrontUrl, // 使用已上传的 URL
-                        // idcard_side_image: uploadedBackUrl  // 使用已上传的 URL
+                         idcard_front_image: uploadedFrontUrl, // 使用已上传的 URL
+                         idcard_side_image: uploadedBackUrl  // 使用已上传的 URL
                     }),
                     success: function(result, textStatus, jqXHR) {
                         if (result.code == 1) {
