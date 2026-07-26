@@ -46,7 +46,7 @@
   "login": {
     "usernamePlaceholder": "请输入用户名",
     "passwordPlaceholder": "请输入密码",
-    "loginButton": "登陆",
+    "loginButton": "登录",
     "registerLink": "会员注册",
     "forgotPassword": "忘记密码？",
     "customerService": "在线客服",
