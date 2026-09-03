@@ -1,0 +1,29 @@
+{
+  "language": "ภาษาไทย",
+  "version": "เวอร์ชัน",
+  "common": {
+    "zh": "简体中文",
+    "en": "English",
+    "th": "ภาษาไทย",
+    "confirm": "ตกลง",
+    "prompt": "คำแนะนำ",
+    "cancel": "ยกเลิก",
+    "back": "กลับ",
+    "next": "ถัดไป",
+    "loading": "กำลังโหลด..."
+  },
+  "login": {
+    "usernamePlaceholder": "กรุณาใส่ชื่อผู้ใช้",
+    "passwordPlaceholder": "กรุณาใส่รหัสผ่าน",
+    "loginButton": "เข้าสู่ระบบ",
+    "registerLink": "สมัครสมาชิก",
+    "forgotPassword": "ลืมรหัสผ่าน?",
+    "customerService": "บริการลูกค้าออนไลน์",
+    "usernameError": "กรุณาใส่ชื่อผู้ใช้ที่ถูกต้อง",
+    "passwordError": "รหัสผ่านผิดพลาด กรุณาลองอีกครั้ง",
+    "loginSuccess": "เข้าสู่ระบบสำเร็จ",
+    "loginFailure": "เข้าสู่ระบบล้มเหลว",
+    "hello": "สวัสดี",
+    "welcome": "ยินดีต้อนรับ"
+  }
+}
